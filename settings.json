@@ -1,0 +1,20 @@
+{
+    "programNames": {
+        "None": "Unknown",
+        "C:\\Windows\\explorer.exe": "Explorer",
+        "C:\\Windows\\System32\\ApplicationFrameHost.exe": "Whatsapp",
+        "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe": "Explorer",
+        "C:\\Windows\\SystemApps\\Microsoft.LockApp_cw5n1h2txyewy\\LockApp.exe": "Lockscreen",
+        "C:\\Users\\henri\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe": "VS Code",
+        "C:\\Program Files\\WindowsApps\\TheBrowserCompany.Arc_1.25.0.57779_x64__ttt1ap7aakyb4\\Arc.exe": "Arc",
+        "C:\\Users\\henri\\AppData\\Local\\Programs\\Notion\\Notion.exe": "Notion",
+        "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.21.2911.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe": "Terminal",
+        "C:\\Users\\henri\\AppData\\Local\\Programs\\cron-web\\Notion Calendar.exe": "Notion Calendar",
+        "C:\\Program Files\\WindowsApps\\MSTeams_24277.3507.3205.5228_x64__8wekyb3d8bbwe\\ms-teams.exe": "MS Teams",
+        "C:\\Users\\henri\\AppData\\Local\\Programs\\Python\\Python312\\python.exe": null
+    },
+    "ignorePrograms": [
+        "Lockscreen",
+        "Unknown"
+    ]
+}

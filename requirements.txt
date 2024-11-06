@@ -1,0 +1,5 @@
+psutil==6.1.0
+pynput==1.7.6
+pywin32==306
+screeninfo==0.8.1
+ttkthemes==3.2.2
