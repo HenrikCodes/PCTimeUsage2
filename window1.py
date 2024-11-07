@@ -56,9 +56,6 @@ class gui:
         self.update_all()
 
     def get_input(self, progPath):
-        # Show a warning message before asking for input
-        messagebox.showwarning("Warning", f"{progPath} not in list of programs.")
-
         # Prompt the user for input
         user_input = simpledialog.askstring("Set new program name", f"{progPath} not in list of programs\nSet Name for program to:")
         print(f"user added {user_input} as program name for {progPath}")
@@ -87,7 +84,7 @@ class gui:
 
     def update_all(self):
         self.programs = dataM.get_today(len(self.mcs)-1)
-        self.const_factor = 1920/math.sqrt(3600*24) # * 10 ### ACHTUNG for better visibility the times 10
+        self.const_factor = 1920/math.sqrt(3600*24) #* 10 ### ACHTUNG for better visibility the times 10
         self.totalTime = sum([t[1] for t in self.programs])+0.001
         self.factor = self.const_factor * math.sqrt(self.totalTime)/self.totalTime
         self.lastEnd = self.xoff -1 #1920/2-totalTime*factor/2

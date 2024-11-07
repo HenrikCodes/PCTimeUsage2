@@ -26,7 +26,6 @@ saveData()
 
 
 def get_today(colors):
-    program_times = []
     programs = []
     for prog in usage_data[str(datetime.datetime.now().date())]:
         prog_time = 0
@@ -34,28 +33,20 @@ def get_today(colors):
             continue
         for entry in usage_data[str(datetime.datetime.now().date())][prog]:
             prog_time += usage_data[str(datetime.datetime.now().date())][prog][entry]["duration"]
-        programs.append(prog)
-        program_times.append(prog_time)
+        programs.append([prog, prog_time])
 
-    new_programs = []
-    if len(program_times) > colors:
-        new_program_times = program_times
-        new_program_times.sort()
-        rest = sum(new_program_times[:-4])
-        new_program_times = new_program_times[-4:]
-        new_program_times.append(rest)
-        new_program_times.sort()
 
-        for el in new_program_times:
-            if el in program_times:
-                index = program_times.index(el)
-                new_programs.append([programs[index], el])
-            else:
-                new_programs.append(["Other", rest])
+    new_programs = programs
+    if len(programs) > colors:
+        new_programs.sort(key=lambda x: x[1], reverse=True)
+        rest = sum(t[1] for t in new_programs[-(colors-1):])
+        new_programs = new_programs[:-(colors-1)]
+        new_programs.append(["Other", rest])
+        new_programs.sort(key=lambda x: x[1], reverse=True)
+
     else:
-        for i, prog in enumerate(programs):
-            new_programs.append([prog, program_times[i]])
-
+        new_programs.sort(key=lambda x: x[1], reverse=True)
+        
     return new_programs
 
 def new_entry(program, duration, mouseDistance, mouseMovetime, keystrokes, typetime):

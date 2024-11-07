@@ -27,7 +27,7 @@ while True:
     gui.update_window()
     changed, duration, prog = process_tracker.process_change(gui)
     if changed:
-        # print(f"{prog} with duration {duration}")
+        print(f"{prog} with duration {duration}")
         dataM.new_entry(program=prog, duration=duration, mouseDistance=mouse_dist, mouseMovetime=mouse_movetime,
                         keystrokes=total_keystrokes, typetime=typing_time)
 
