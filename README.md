@@ -17,6 +17,7 @@ To set up and start using Windows 11 Activity Tracker:
 3. Run the main script to begin tracking.
 
 ### Future Enhancements
+- **Automatic Update**: Update the timer every second, not just on application change.
 - **Detailed Reports**: Generate daily, weekly, or monthly reports.
 - **Customization Options**: Allow users to categorize and filter tracked applications.
 - **Additional Visualizations**: Expand on the current UI to include pie charts, heatmaps, etc., for a more comprehensive overview.
