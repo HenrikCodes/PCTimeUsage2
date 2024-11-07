@@ -34,9 +34,9 @@ def get_today(colors):
 
     new_programs = programs
     if len(programs) > colors:
-        new_programs.sort(key=lambda x: x[1], reverse=True)
-        rest = sum(t[1] for t in new_programs[-(colors-1):])
-        new_programs = new_programs[:-(colors-1)]
+        new_programs.sort(key=lambda x: x[1])
+        rest = sum(t[1] for t in new_programs[:-(colors-1)])
+        new_programs = new_programs[-(colors-1):]
         new_programs.append(["Other", rest])
         new_programs.sort(key=lambda x: x[1], reverse=True)
 
