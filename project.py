@@ -32,6 +32,8 @@ def why():
 
 
 def main():
+    global  mouse_dist, mouse_movetime, last_dist, delta_mouse_time, total_keystrokes, typing_time, last_keys, delta_keys_time
+
     while True:
         gui.update_window()
         changed, duration, prog = process_tracker.process_change(gui)
@@ -73,5 +75,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-why()

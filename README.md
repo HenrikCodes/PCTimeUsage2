@@ -1,6 +1,6 @@
 # Windows 11 Activity Tracker
 
-#### Video Demo: [Link to Demonstration Video](<URL HERE>)
+#### Video Demo: [Link to Demonstration Video](<https://youtu.be/wSM72Oa0dPM)
 
 ### Overview
 **Windows 11 Activity Tracker** is a tool designed to monitor and visualize user activity across different applications on Windows 11. The program tracks the time spent in each application, records keystrokes, and calculates the distance the mouse has moved, providing users with an insightful breakdown of their daily activity.
@@ -21,3 +21,11 @@ To set up and start using Windows 11 Activity Tracker:
 - **Detailed Reports**: Generate daily, weekly, or monthly reports.
 - **Customization Options**: Allow users to categorize and filter tracked applications.
 - **Additional Visualizations**: Expand on the current UI to include pie charts, heatmaps, etc., for a more comprehensive overview.
+
+
+### Components
+- **`dataM.py`**: Manages data collection and formatting. It captures the activity data, saves it, and reformats it to fit the structure required for the bar graph display.
+- **`Keylistener.py`**: Tracks the number of user keyboard inputs (key presses), without recording the actual keystrokes for privacy.
+- **`mousetracker.py`**: Tracks mouse activity, including clicks and movement, to gauge overall user interaction.
+- **`window1.py`**: Displays a bar graph visualizing the collected data. It includes mouseover tooltips and a stopwatch. When an unknown program is opened, a dialog box is shown for user input.
+- **`WindowTracker.py`**: Tracks the active process using the `win32gui` library, ensuring correct application names are retrieved based on specified settings.

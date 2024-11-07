@@ -1,7 +1,6 @@
 # gerade am mouseoveraktion machen mit tooltip oder etwas anderem oder mausposition
 import time
 from ast import Import
-from cgitb import text
 from http.client import ImproperConnectionState
 from sqlite3 import Time
 import tkinter as tk
