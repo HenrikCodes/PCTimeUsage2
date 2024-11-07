@@ -26,32 +26,23 @@ class process_tracker:
     def get_program_name(self, prog, gui):
 
         if prog not in self.programs:
-            # print("Unknown program: " + str(prog))
-            # x = input("Do you want to add it? (y/n) ")
-            # if x == "y":
-            #     self.programs[prog] = input("Name: ")
             self.programs[prog] = gui.get_input(prog)
             self.saveSettings()
 
         return self.programs[prog]
 
     def get_active_program_executable(self):
-        # Get the window handle of the currently active window
         hwnd = win32gui.GetForegroundWindow()
-
-        # Get the process ID of the current window
         _, pid = win32process.GetWindowThreadProcessId(hwnd)
 
         # Remove any negative process IDs
         if pid < 0:
-            # print(f"Negative process ID {pid}")
             return pid, "None"
 
         # Find the process and get its executable path
         try:
             process = psutil.Process(pid)
-            # print(process)
-            executable_path = process.exe()  # Get the executable path
+            executable_path = process.exe()
             return pid, executable_path
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             return pid, "None"

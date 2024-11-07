@@ -2,10 +2,6 @@ import datetime
 import json
 import time
 
-# a = [1,2,3,4]
-# print(a[-2:])
-# raise
-
 
 data_path = "usage.json"
 

@@ -3,13 +3,6 @@ import time
 import math
 from screeninfo import get_monitors
 
-# def on_scroll(x, y, dx, dy):
-#     print('Scrolled {0}'.format(dy))
-
-# # Create a listener
-# with pynput.mouse.Listener(on_scroll=on_scroll) as listener:
-#     listener.join()
-
 
 class mouse_tracker:
     def __init__(self):

@@ -6,6 +6,7 @@ from Keylistener import keyboard_tracker
 from window1 import gui
 import dataM
 
+
 mouse_dist = 0
 mouse_movetime = 0
 last_dist = 0
@@ -16,7 +17,6 @@ typing_time = 0
 last_keys = 0
 delta_keys_time = time.time()
 
-# ohne globale variablen
 
 mouse_tracker = mouse_tracker()
 keyboard_tracker = keyboard_tracker()
